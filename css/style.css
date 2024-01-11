@@ -104,6 +104,8 @@ header {
   .day-det {
     background-color: #262936;
   }
+  .day-det {
+  }
 }
 
 @media (min-width: 896px) {
