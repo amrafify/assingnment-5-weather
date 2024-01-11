@@ -108,7 +108,7 @@ header {
     height: 180%;
   }
 }
-@media (max-width: 896px) {
+@media (min-width: 896px) {
   header {
     height: 515px;
   }
