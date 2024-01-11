@@ -113,7 +113,7 @@ header {
     height: 515px;
   }
 }
-@media (min-width: 768px) {
+@media (max-width: 896px) {
   .container,
   .container-md,
   .container-sm {
