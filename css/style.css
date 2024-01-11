@@ -118,7 +118,13 @@ header {
     max-width: 837px;
   }
 }
-
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 960px;
+  }
+}
 footer {
   background-color: #262936;
   p {
