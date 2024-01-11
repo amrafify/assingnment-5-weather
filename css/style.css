@@ -112,14 +112,13 @@ header {
   header {
     height: 515px;
   }
-}
-@media (max-width: 896px) {
   .container,
   .container-md,
   .container-sm {
     max-width: 837px;
   }
 }
+
 footer {
   background-color: #262936;
   p {
