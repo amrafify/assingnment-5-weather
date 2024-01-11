@@ -108,6 +108,18 @@ header {
     height: 180%;
   }
 }
+@media (max-width: 896px) {
+  header {
+    height: 515px;
+  }
+}
+@media (min-width: 768px) {
+  .container,
+  .container-md,
+  .container-sm {
+    max-width: 837px;
+  }
+}
 footer {
   background-color: #262936;
   p {
