@@ -1,7 +1,23 @@
 let data = {};
 let searchInput = document.querySelector("#input-search");
+let latitude = "";
 
-async function getWeather(location = "cairo") {
+const successCallback = (position) => {
+  loca = {
+    latitude: position.coords.latitude,
+    longitude: position.coords.longitude,
+  };
+  console.log(loca);
+  latitude = loca.latitude;
+  longitude = loca.longitude;
+  getWeather(`${latitude},${longitude}`);
+};
+const errorCallback = (error) => {
+  console.log(error);
+};
+console.log(latitude);
+navigator.geolocation.getCurrentPosition(successCallback);
+async function getWeather(location = "alex") {
   let myReq = await fetch(
     `https://api.weatherapi.com/v1/forecast.json?key=9cd0c1c4a7d949e6a5802914240801&q=${location}&days=3`
   );
@@ -169,6 +185,6 @@ function display() {
 
   document.querySelector("#myData").innerHTML = temp;
 }
-searchInput.addEventListener("keyup", () => {
+searchInput.addEventListener("change", () => {
   getWeather(searchInput.value);
 });
