@@ -7,7 +7,6 @@ const successCallback = (position) => {
     latitude: position.coords.latitude,
     longitude: position.coords.longitude,
   };
-  console.log(loca);
   latitude = loca.latitude;
   longitude = loca.longitude;
   getWeather(`${latitude},${longitude}`);
